@@ -36,6 +36,7 @@ func (c *Clock) Stop() {
 
 func (c *Clock) Reset() {
 	c.accumulator = 0
+	c.stopped = true
 }
 
 func (c *Clock) Now() time.Duration {
