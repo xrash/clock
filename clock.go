@@ -46,3 +46,7 @@ func (c *Clock) Now() time.Duration {
 
 	return c.accumulator + time.Since(c.lastPoint)
 }
+
+func (c *Clock) Running() bool {
+	return !c.stopped
+}
